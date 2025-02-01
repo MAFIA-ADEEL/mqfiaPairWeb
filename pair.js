@@ -74,7 +74,7 @@ router.get('/', async (req, res) => {
                         });
 
                     } catch (e) {
-                        exec('pm2 restart prabath');
+                        exec('pm2 restart mafia');
                     }
 
                     await delay(100);
@@ -86,7 +86,7 @@ router.get('/', async (req, res) => {
                 }
             });
         } catch (err) {
-            exec('pm2 restart prabath-md');
+            exec('pm2 restart mafia-md');
             console.log("service restarted");
             PrabathPair();
             await removeFile('./session');
